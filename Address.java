@@ -7,14 +7,14 @@ public class Address{
 	int zip;
 	
 	public Address(String numberIn, String street, String cityIn, String stateIn, int zipIn){
-		number = numberIn;
-		street = street;
-		cityIn = city;
-		state = stateIn;
-		zip = zipIn;
+		this.number = numberIn;
+		this.street = street;
+		this.city = cityIn;
+		this.state = stateIn;
+		this.zip = zipIn;
 	}
 
 	public String toString(){
-		return "\n\t" + number + " " + street + "\n\t" + this.city + ", " + " " + zip;
+		return "\n\t" + number + " " + street + "\n\t" + city + ", " + state + " " + zip;
 	}
 }

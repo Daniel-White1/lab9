@@ -22,7 +22,7 @@ public class Person{
 	}
 
 	public String toString(){
-		return firstname + " " + lastname + "\n\t" + age + " years old";
+		return firstname + " " + lastname + "\n\t" + age + " years old" + address.toString();
 	}
 
 	public String getFirstName(){
