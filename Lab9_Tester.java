@@ -8,6 +8,12 @@ public class Lab9_Tester {
   public void test1() {
     Address address = new Address("800", "22nd Street", "Washington", "DC", 20002);
     Person jane = new Person("Jane", "Doe", 23, address);
+
+    //System.out.println("Jane Doe\n\t23 years old\n\t800 22nd Street\n\tWashington, DC 20002");
+    //System.out.println(jane);
+
+    //System.out.println(Person.getCount());
+
     assertEquals("Jane Doe\n\t23 years old\n\t800 22nd Street\n\tWashington, DC 20002", jane.toString());
     assertEquals(1, Person.getCount());
     Person.count = 0;
@@ -18,6 +24,9 @@ public class Lab9_Tester {
     Address address = new Address("800", "22nd Street", "Washington", "DC", 20002);
     Person jane = new Person("Jane", "Doe", 23, address);
     jane = new Person("Jane", "Doe", 23, address);
+
+    //System.out.println(Person.getCount());
+
     assertEquals(2, Person.getCount());
     Person.count = 0;
   }
@@ -41,6 +50,10 @@ public class Lab9_Tester {
     Person.count = 0;
 
     String alphabetized_names = "Michael Abraham\nJane Doe\nJohn Doe\nYoon Kim\nZack Martinez\nPriya Patel";
+
+    //System.out.println(alphabetized_names);
+    //System.out.println(Person.sortPeople(people));
+    
     assertEquals(alphabetized_names, Person.sortPeople(people));
   }
 
