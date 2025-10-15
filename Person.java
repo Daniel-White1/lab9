@@ -41,8 +41,11 @@ public class Person{
                 Person current = people.get(j);
                 Person minPerson = people.get(minIndex);
 
-                if (current.getFirstName().compareTo(minPerson.getFirstName()) < 0 ||
-                    (current.getFirstName().equals(minPerson.getFirstName()) && current.getLastName().compareTo(minPerson.getLastName()) < 0)) {
+				//This was set up to be sorted by first name than last name instead of alphabetized order
+				//which is last name then by first name. I guess I should have payed attention more in english class to find this quicker
+                if (current.getLastName().compareTo(minPerson.getLastName()) < 0 ||
+                    (current.getLastName().equals(minPerson.getLastName()) &&
+					 current.getFirstName().compareTo(minPerson.getFirstName()) < 0)) {
                     minIndex = j;
                 }
             }
@@ -55,10 +58,18 @@ public class Person{
         }
 
         String result = "";
+		//not entirely sure if I beansed up the tester so I recopied it across from the orignial file again
+		//I noticed the last item on the list doesnt have a \n so we need to add in a counter so we know we are on the last element
+		//theres probably a short hand but im just going to do a simple counter
+		int counter = 0;
         for (Person p : people){
-        	result = result + p.getFirstName() + " " + p.getLastName() + "\n";
+			if (counter == people.size() - 1) {
+        		result = result + p.getFirstName() + " " + p.getLastName();
+			} else {
+        		result = result + p.getFirstName() + " " + p.getLastName() + "\n";
+			}
+			counter++;
         }
-
         return result.substring(0, result.length());
     }		
 }

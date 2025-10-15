@@ -41,9 +41,6 @@ public class Lab9_Tester {
     Person.count = 0;
 
     String alphabetized_names = "Michael Abraham\nJane Doe\nJohn Doe\nYoon Kim\nZack Martinez\nPriya Patel";
-    System.out.println(alphabetized_names);
-    System.out.println(Person.sortPeople(people));
-
     assertEquals(alphabetized_names, Person.sortPeople(people));
   }
 
